@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:id="@+id/gamehall_logining_layout"
-        android:layout_width="300dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/gamehall_login_bg"
@@ -89,16 +89,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/gamehall_user_switch_selector"
         android:paddingBottom="8dp"
-        android:paddingTop="8dp"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
-        android:background="@drawable/gamehall_user_switch_selector"
+        android:paddingTop="8dp"
         android:text="@string/gamehall_loading_switch"
         android:textColor="@android:color/white"
         android:textSize="16dp"
-        android:visibility="gone"
-         />
+        android:visibility="gone" />
 
 </RelativeLayout>

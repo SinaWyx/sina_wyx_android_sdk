@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- 后弹窗宽 -->
+    <dimen name="gamehall_dialog_width">400dip</dimen>
+    
+    <!-- 账号绑定，宽度 -->
+    <dimen name="gamehall_account_width">320dip</dimen>
+    
+    <!-- 前弹窗 宽X高-->
+    <dimen name="gamehall_entrypopup_width">400dip</dimen>
+    <dimen name="gamehall_entrypopup_height">256dip</dimen>
+</resources>

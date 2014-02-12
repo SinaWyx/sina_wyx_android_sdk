@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/gamehall_popup_detail_bg_black" >
+
+        <include
+            android:id="@+id/gamehall_feedback_send_title"
+            layout="@layout/gamehall_feedback_title_include" />
+
+        <EditText
+            android:id="@+id/gamehall_feedback_write"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/gamehall_feedback_send_title"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/gamehall_feedback_write"
+            android:cursorVisible="true"
+            android:gravity="top|left"
+            android:padding="1dp"
+            android:singleLine="false"
+            android:textColor="@android:color/white"
+            android:textCursorDrawable="@android:color/white"
+            android:hint="@string/gamehall_feedback_hint"
+            android:textSize="14dp" />
+    </RelativeLayout>
+</FrameLayout>

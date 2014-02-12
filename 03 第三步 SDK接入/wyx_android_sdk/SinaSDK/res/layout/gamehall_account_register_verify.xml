@@ -48,7 +48,7 @@
             android:paddingLeft="10dip"
             android:paddingRight="10dip"
             android:paddingTop="10dip"
-            android:text="@string/gamehall_account_register_verify_tag"/>"
+            android:text="@string/gamehall_account_register_verify_tag"/>
 
         <EditText
             android:id="@+id/securutycode_edittext"
@@ -89,7 +89,7 @@
                 android:id="@+id/timer_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="30"
+                android:text="@string/gamehall_account_register_timer_txt"
                 android:textColor="@color/gamehall_common_desc"
                 android:textSize="14dp" />
 

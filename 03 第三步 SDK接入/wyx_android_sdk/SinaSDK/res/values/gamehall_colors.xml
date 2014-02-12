@@ -5,6 +5,12 @@
     <color name="txt_black">#000000</color>
     
    	<!--帐户管理-->
+   	<color name="gamehall_account_login_tab_nor">#808080</color>
+   	<color name="gamehall_account_login_tab_sel">#4c9f02</color>
+   	
+   	<color name="gamehall_account_register_tab_nor">#808080</color>
+   	<color name="gamehall_account_register_tab_sel">#027598</color>
+   	
    	<color name="gamehall_account_label">#000</color>
    	
    	<color name="gamehall_account_register_nor">#5fb200</color>
@@ -12,6 +18,8 @@
    	
    	<color name="gamehall_account_reset_nor">#808080</color>
    	<color name="gamehall_account_reset_sel">#b3b3b3</color>
+   	
+   	<color name="gamehall_account_input">#231815</color>
    	
    	<!-- 登录中 -->
    	<color name="gamehall_account_loading_label">#808080</color>

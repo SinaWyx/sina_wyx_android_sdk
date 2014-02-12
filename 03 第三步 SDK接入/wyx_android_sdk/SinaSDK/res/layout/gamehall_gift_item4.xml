@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:background="@drawable/gamehall_mine_selector" >
+
+    <ImageView
+        android:id="@+id/gamehall_gift_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="true"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/gamehall_gift_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/gamehall_gift_logo"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/gamehall_gift_logo"
+        android:textColor="@android:color/white"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/gamehall_gift_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gamehall_gift_title"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:lines="2"
+        android:layout_toRightOf="@id/gamehall_gift_logo"
+        android:textColor="@android:color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/gamehall_gift_param"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/gamehall_gift_logo"
+        android:layout_below="@id/gamehall_gift_content"
+        android:textColor="#999"
+        android:textSize="12dp" >
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/gamehall_feedback_sent_allows_selector" />
+
+</RelativeLayout>

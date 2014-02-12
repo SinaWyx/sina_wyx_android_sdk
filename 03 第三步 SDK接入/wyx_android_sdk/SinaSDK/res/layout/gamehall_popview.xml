@@ -8,8 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:cacheColorHint="#00000000"
-        android:divider="@drawable/gamehall_list_blockbg_divider"
-        android:listSelector="@drawable/gamehall_popview_item_selector" >
+        android:divider="@drawable/gamehall_list_blockbg_divider">
     </ListView>
 
 </LinearLayout>

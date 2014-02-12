@@ -37,7 +37,7 @@
             android:paddingLeft="10dip"
             android:paddingRight="10dip"
             android:paddingTop="10dip"
-            android:text="+86"
+            android:text="@string/gamehall_account_register_country_number"
             android:textSize="14dp" />
 
         <TextView
@@ -174,7 +174,7 @@
                 android:maxLength="16"
                 android:paddingBottom="15dip"
                 android:paddingTop="15dip"
-                android:password="true"
+                android:inputType="textPassword"
                 android:singleLine="true"
                 android:textColor="@color/txt_black"
                 android:textSize="14dp" />

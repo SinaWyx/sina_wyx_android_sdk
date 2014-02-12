@@ -31,21 +31,21 @@
                 android:background="@drawable/gamehall_feedback_write"
                 android:layout_marginLeft="10dp"
                 android:textColor="@android:color/white"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 android:layout_weight="1"
-                android:maxHeight="50dp" />
+                android:maxHeight="60dp" />
 
             <Button
                 android:id="@+id/gamehall_feedback_record_button_enter"
                 android:layout_width="50dp"
-                android:layout_height="25dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/gamehall_feedback_button_selector"
                 android:text="@string/gamehall_feedback_enter"
                 android:textColor="@android:color/white"
-                android:textSize="14dp" />
+                android:textSize="16dp" />
         </LinearLayout>
 
         <ListView

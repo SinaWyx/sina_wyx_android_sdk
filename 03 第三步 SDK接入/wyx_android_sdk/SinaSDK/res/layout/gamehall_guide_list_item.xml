@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/gamehall_mine_selector"  >
+
+    <ImageView
+        android:id="@+id/gamehall_guide_item_logo"
+        android:layout_width="94dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/gamehall_guide_item_arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gamehall_feedback_sent_allows_selector" />
+    
+    <TextView
+        android:layout_toRightOf="@id/gamehall_guide_item_logo"
+        android:id="@+id/gamehall_guide_item_title"
+        android:layout_toLeftOf="@id/gamehall_guide_item_arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@android:color/white"
+        android:textSize="14dp" />
+
+    <TextView
+        android:layout_toRightOf="@id/gamehall_guide_item_logo"
+        android:layout_below="@id/gamehall_guide_item_title"
+        android:layout_toLeftOf="@id/gamehall_guide_item_arrows"
+        android:id="@+id/gamehall_guide_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="12dp" />
+
+    <TextView
+        android:layout_toRightOf="@id/gamehall_guide_item_logo"
+        android:layout_below="@id/gamehall_guide_item_text"
+        android:layout_toLeftOf="@id/gamehall_guide_item_arrows"
+        android:id="@+id/gamehall_guide_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#999"
+        android:textSize="11dp" />
+
+    
+
+</RelativeLayout>

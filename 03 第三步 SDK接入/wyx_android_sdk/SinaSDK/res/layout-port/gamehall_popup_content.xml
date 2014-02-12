@@ -22,7 +22,6 @@
             <RadioButton
                 style="@style/popup_content_port_menu_style"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/gamehall_popup_menu_lb_selector"
                 android:background="@drawable/gamehall_popup_back_menu_lefttop_selector"
@@ -31,7 +30,6 @@
             <RadioButton
                 style="@style/popup_content_port_menu_style"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/gamehall_popup_menu_gl_selector"
                 android:background="@drawable/gamehall_popup_back_menu_middle_selector"
@@ -40,7 +38,6 @@
             <RadioButton
                 style="@style/popup_content_port_menu_style"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:drawableTop="@drawable/gamehall_popup_menu_lt_selector"
                 android:background="@drawable/gamehall_popup_back_menu_middle_selector"
                 android:layout_weight="1"
@@ -49,7 +46,6 @@
             <RadioButton
                 style="@style/popup_content_port_menu_style"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/gamehall_popup_menu_activity_selector"
                 android:background="@drawable/gamehall_popup_back_menu_middle_selector"
@@ -58,7 +54,6 @@
              <RadioButton
                 style="@style/popup_content_port_menu_style"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableTop="@drawable/gamehall_popup_menu_wd_selector"
                 android:background="@drawable/gamehall_popup_back_menu_righttop_selector"

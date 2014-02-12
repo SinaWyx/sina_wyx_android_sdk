@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.sina.youxi.ui.pulltorefresh_reload_listview.XListView
+        android:id="@+id/gamehall_guide_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:scrollbars="none" >
+    </cn.sina.youxi.ui.pulltorefresh_reload_listview.XListView>
+
+    <include
+        android:id="@+id/gamehall_guide_loading"
+        layout="@layout/gamehall_loading_view"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/gamehall_guide_nonet"
+        layout="@layout/gamehall_nonet_page"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/gamehall_guide_nodata"
+        layout="@layout/gamehall_nodata_view"
+        android:visibility="gone" />
+
+</FrameLayout>

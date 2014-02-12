@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="@dimen/gamehall_entrypopup_width"
     android:layout_height="wrap_content" >
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/dialog_close_view"
         android:layout_width="match_parent"
-        android:layout_height="20dip"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="right"
-        android:paddingRight="20dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gamehall_exitpopup_title_bg"
         android:orientation="horizontal" >
-    </LinearLayout>
+
+        <TextView
+            android:id="@+id/exit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/gamehall_update_label"
+            android:textColor="@color/txt_white"
+            android:textSize="16dp" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/dialog_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dialog_close_view"
-        android:layout_marginTop="5dip"
+        android:background="@color/txt_white"
         android:lineSpacingExtra="2dip"
-        android:paddingLeft="20dip"
-        android:textColor="@color/txt_white"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:textColor="@color/txt_black"
         android:textSize="16dp" />
 
     <RelativeLayout
@@ -30,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dialog_text"
+        android:background="@color/txt_white"
         android:paddingBottom="10dip"
         android:paddingLeft="20dip"
         android:paddingRight="20dip"
@@ -42,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
-            android:text="0%" />
+            android:text="@string/dialog_progress_text" />
 
         <ProgressBar
             android:id="@+id/dialog_progress_rate"
@@ -62,27 +74,32 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dialog_progress_view"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/gamehall_popup_bg"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingLeft="20dip"
-        android:paddingRight="20dip" >
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
 
         <Button
             android:id="@+id/dialog_yes_btn"
-            style="@style/install_button"
-            android:layout_marginBottom="33dip"
-            android:layout_marginRight="5dip"
-            android:layout_marginTop="33dip"
-            android:text="@string/gamehall_update"/>
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="@drawable/gamehall_button2_selector2"
+            android:text="@string/gamehall_update"
+            android:textColor="@color/txt_white"
+            android:textSize="16dp" />
 
         <Button
             android:id="@+id/dialog_no_btn"
-            style="@style/install_button"
-            android:layout_marginBottom="33dip"
-            android:layout_marginLeft="5dip"
-            android:layout_marginTop="33dip"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
             android:layout_toRightOf="@id/dialog_yes_btn"
+            android:background="@drawable/gamehall_button2_selector2"
             android:text="@string/gamehall_no_update"
+            android:textColor="@color/txt_white"
+            android:textSize="16dp"
             android:visibility="gone" />
     </RelativeLayout>
 

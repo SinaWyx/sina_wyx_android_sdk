@@ -6,4 +6,14 @@
     <dimen name="gamehall_sdk_dialog_bottom_margin">0dip</dimen>
     
     <dimen name="gamehall_ad_width">280dp</dimen>
+    
+    <!-- 后弹窗宽 -->
+    <dimen name="gamehall_dialog_width">300dip</dimen>
+    
+    <!-- 账号绑定，宽度 -->
+    <dimen name="gamehall_account_width">300dip</dimen>
+    
+    <!-- 前弹窗 宽X高-->
+    <dimen name="gamehall_entrypopup_width">306dip</dimen>
+    <dimen name="gamehall_entrypopup_height">280dip</dimen>
 </resources>

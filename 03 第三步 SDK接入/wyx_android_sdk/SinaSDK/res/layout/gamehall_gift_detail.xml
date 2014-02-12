@@ -1,0 +1,143 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/gamehall_popup_detail_bg_black" >
+
+        <include
+            android:id="@+id/gamehall_guide_detail_title"
+            layout="@layout/gamehall_feedback_title_include" />
+
+        <FrameLayout
+            android:id="@+id/gamehall_gift_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gamehall_gift_bottom_bg"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <Button
+                android:id="@+id/gamehall_gift_download"
+                android:layout_width="266dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gamehall_gift_button_selector"
+                android:text="@string/gamehall_gift_download"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/gamehall_gift_bottom"
+            android:layout_below="@id/gamehall_guide_detail_title" >
+
+            <ScrollView
+                android:id="@+id/gamehall_gift_scrollview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/gamehall_gift_detail_title_bg"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="10dp" >
+
+                        <ImageView
+                            android:id="@+id/gamehall_gift_detail_logo"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/gamehall_gift_detail_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:id="@+id/gamehall_gift_detail_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textColor="#fe8a00"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <WebView
+                        android:id="@+id/gamehall_detail_web"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp" >
+
+                        <Button
+                            android:id="@+id/gamehall_gift_get"
+                            android:layout_width="112dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/gamehall_gift_button_selector"
+                            android:text="@string/gamehall_gift_receiver"
+                            android:textColor="@android:color/white"
+                            android:textSize="16dp" />
+
+                        <Button
+                            android:id="@+id/gamehall_gift_book"
+                            android:layout_width="112dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/gamehall_gift_button_selector"
+                            android:text="@string/gamehall_gift_book"
+                            android:textColor="@android:color/white"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <include
+                android:id="@+id/gamehall_gift_loading"
+                layout="@layout/gamehall_loading_view"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/gamehall_gift_nonet"
+                layout="@layout/gamehall_nonet_page"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/gamehall_gift_nodata"
+                layout="@layout/gamehall_nodata_view"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</FrameLayout>

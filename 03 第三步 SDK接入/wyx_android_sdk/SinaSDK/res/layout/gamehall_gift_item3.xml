@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gamehall_setbar_bg" >
+
+    <TextView
+        android:id="@+id/gamehall_gift_title"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:text="@string/gamehall_hot_gift"
+        android:textColor="@android:color/white"
+        
+        android:textSize="14dp" />
+
+</FrameLayout>

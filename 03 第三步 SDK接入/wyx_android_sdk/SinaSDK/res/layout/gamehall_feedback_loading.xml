@@ -18,6 +18,6 @@
         android:layout_marginLeft="8dp"
         android:textColor="@android:color/white"
         android:textSize="16dp"
-        android:text="加载中，请稍候。" />
+        android:text="@string/gamehall_loading"/>
 
 </LinearLayout>
