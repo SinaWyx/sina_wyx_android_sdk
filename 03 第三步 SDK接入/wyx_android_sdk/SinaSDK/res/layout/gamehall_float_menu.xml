@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     android:layout_gravity="center" >
 
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
+
     <LinearLayout
         android:id="@+id/item_view"
         android:layout_width="wrap_content"
@@ -81,6 +87,5 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
     </LinearLayout>
-    
 
 </FrameLayout>

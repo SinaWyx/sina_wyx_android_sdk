@@ -72,8 +72,7 @@
         	注：android:authorities中，“sdk.download.”后面的部分，一定要配置为当前游戏的packageName
         	否则会和其他游戏冲突，导致用户无法安装
         	例如：
-        	当前packageName为：com.example.xxxx，则android:authorities="sdk.download.com.example.xxxx"
-        -->
+        	当前packageName为：com.example.xxxx，则android:authorities="sdk.download.com.example.xxxx"        -->
         <provider
             android:name="sdk.download.DownloadProvider"
             android:authorities="sdk.download.com.example.testgame_wyx"
@@ -115,7 +114,8 @@
             android:name="cn.sina.youxi.pay.sdk.ui.AccountLoginVerifyActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:theme="@style/gamehall_account_dialog"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden"
+             >
         </activity>
         <activity
             android:name="cn.sina.youxi.pay.sdk.ui.AccountRegisterActivity"
@@ -254,7 +254,8 @@
             android:name="cn.sina.youxi.ui.GiftDetailActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:theme="@style/gamehall_transparent"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden" 
+            android:hardwareAccelerated="false">
         </activity>
         <activity
             android:name="cn.sina.youxi.ui.FeedbackSendActivity"

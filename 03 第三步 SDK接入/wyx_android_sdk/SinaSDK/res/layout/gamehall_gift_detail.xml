@@ -94,11 +94,17 @@
                         android:id="@+id/gamehall_detail_web"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"/>
+                    
+                    <WebView
+                        android:id="@+id/gamehall_act_intro_web"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/>
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:background="@android:color/transparent"
                         android:padding="10dp" >
 
                         <Button
