@@ -3,6 +3,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:textColor="@android:color/white"
+    android:lineSpacingMultiplier="1.5"
     android:textSize="14dp" >
 
 </TextView>

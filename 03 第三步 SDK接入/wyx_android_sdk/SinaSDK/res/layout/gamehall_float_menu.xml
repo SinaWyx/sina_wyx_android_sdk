@@ -5,18 +5,19 @@
     android:layout_gravity="center" >
 
     <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="1dip"
+        android:layout_height="1dip"
         android:layout_gravity="center"
-        android:indeterminate="true" />
+        android:indeterminate="true"
+        />
 
     <LinearLayout
         android:id="@+id/item_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="3dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginLeft="@dimen/gamehall_float_item_margin"
+        android:layout_marginRight="@dimen/gamehall_float_item_margin"
         android:background="@drawable/gamehall_popup_menu_bg"
         android:orientation="vertical" >
 
@@ -31,7 +32,7 @@
                 android:layout_height="match_parent" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/gamehall_float_item_split"
                 android:layout_height="match_parent"
                 android:background="@drawable/gamehall_menu_split_portrait" />
 
@@ -41,7 +42,7 @@
                 android:layout_height="match_parent" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/gamehall_float_item_split"
                 android:layout_height="match_parent"
                 android:background="@drawable/gamehall_menu_split_portrait" />
 
@@ -53,7 +54,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/gamehall_float_item_split"
             android:background="@drawable/gamehall_menu_split_landscape" />
 
         <LinearLayout
@@ -67,7 +68,7 @@
                 android:layout_height="match_parent" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/gamehall_float_item_split"
                 android:layout_height="match_parent"
                 android:background="@drawable/gamehall_menu_split_portrait" />
 
@@ -77,7 +78,7 @@
                 android:layout_height="match_parent" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/gamehall_float_item_split"
                 android:layout_height="match_parent"
                 android:background="@drawable/gamehall_menu_split_portrait" />
 

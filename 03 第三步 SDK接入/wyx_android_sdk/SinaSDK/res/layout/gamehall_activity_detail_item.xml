@@ -18,7 +18,7 @@
         android:gravity="left"
         android:lineSpacingMultiplier="1.5"
         android:textSize="14dp"
-        android:textColor="@color/gamehall_common_desc"
+        android:textColor="@android:color/white"
         android:autoLink="web"
          />
 

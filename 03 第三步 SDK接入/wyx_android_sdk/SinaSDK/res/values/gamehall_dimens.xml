@@ -15,6 +15,8 @@
     <!-- 弹出菜单页 Item宽高 -->
     <dimen name="gamehall_float_item_width">102dp</dimen>
     <dimen name="gamehall_float_item_height">70dp</dimen>
+    <dimen name="gamehall_float_item_margin">3dp</dimen>
+    <dimen name="gamehall_float_item_split">1dp</dimen>
     
     <!-- 弹出菜单页宽高 -->
     <dimen name="gamehall_float_item_button_width">26.7dp</dimen>

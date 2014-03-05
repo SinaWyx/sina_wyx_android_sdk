@@ -3,7 +3,7 @@
 
     <!-- app 列表名称 -->
     <string name="gamehall_app_name">SinaSDK</string>
-    <string name="gamehall_sdk_version">2.1.1</string>
+    <string name="gamehall_sdk_version">2.1.2</string>
 
     <!-- 网络 -->
     <string name="gamehall_network_null">无法连接到网络，请检查网络设置</string>
