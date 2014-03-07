@@ -37,7 +37,7 @@ public class PayDemoActivity extends FragmentActivity {
 	private Context mContext;
 	private ProgressDialog mProgressDialog;
 
-	private Button mButton1, mButton2;
+	private Button mButton1;
 	private TextView textView1;
 	
 	private Wyx mWyx = null;
@@ -73,7 +73,6 @@ public class PayDemoActivity extends FragmentActivity {
 		mProgressDialog.setCancelable(true);
 
 		mButton1 = (Button) findViewById(R.id.button1);
-		mButton2 = (Button) findViewById(R.id.button2);
 		textView1 = (TextView) findViewById(R.id.textView1);
 
 		setUserInfo();
@@ -93,43 +92,6 @@ public class PayDemoActivity extends FragmentActivity {
 				} else {
 					Toast.makeText(mContext, "请先登录", Toast.LENGTH_SHORT).show();
 				}
-			}
-		});
-
-		// 订单查询
-		mButton2.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				mProgressDialog.show();
-				
-				/**
-				 * 这是一个测试订单号 515016e266fc82110
-				 */
-				mWyx.queryOrder("515016e266fc82110", new ResponseListener() {
-
-					@Override
-					public void onComplete(String response) {
-						if (mProgressDialog.isShowing()) {
-							mProgressDialog.dismiss();
-						}
-
-						Bundle data = new Bundle();
-						data.putString("response", response);
-
-						Message msg = mHandler.obtainMessage(-1);
-						msg.setData(data);
-						mHandler.sendMessage(msg);
-					}
-
-					@Override
-					public void onFail(Exception e) {
-						e.printStackTrace();
-						if (mProgressDialog.isShowing()) {
-							mProgressDialog.dismiss();
-						}
-					}
-				});
 			}
 		});
 	}
@@ -168,9 +130,12 @@ public class PayDemoActivity extends FragmentActivity {
 		}
 	} 
 	
-	// 支付窗口关闭时会回调该接口，如果想查询订单状态，可以在该回调中实现
+	// TODO
+	// 支付窗口关闭时会回调该接口，可以在该回调中查询游戏服务器，得到订单状态，并来改变客户端金币、元宝的数量
+	// 由于网络请求的不确定性，用户发起查询的时候，回调过程可能尚未结束，因此开发商的需要发起多次查询，直到查询到当前订单状态。
+	// 例如，开发商可以维护一个定时器，定时到游戏服务器上查询。
 	class PayDialogDismissListener implements OnDismissListener {
-
+		
 		@Override
 		public void onDismiss(DialogInterface dialog) {
 			if (mProgressDialog.isShowing()) {
@@ -178,30 +143,11 @@ public class PayDemoActivity extends FragmentActivity {
 			}
 			
 			// TODO
-			Log.i(TAG, "placeOrder，支付窗口关掉，当前订单号：" + mOrderId);
+			Log.i(TAG, "支付窗口关掉，当前订单号：" + mOrderId);
 			Toast.makeText(PayDemoActivity.this, "（测试信息）：支付窗口关掉，当前订单号："+ mOrderId, Toast.LENGTH_SHORT)
 					.show();
 			
-			/**
-			 * 
-			 * 查询订单状态示例代码
-			mWyx.queryOrder(mOrderId,
-				new ResponseListener() {
-				
-					@Override
-					public void onComplete(
-					String response) {
-						 Log.i(TAG, "queryOrder，支付窗口关掉，查询订单：" + mOrderId);
-						 Log.i(TAG, "queryOrder，支付窗口关掉，查询订单结果：" + response);
-					}
-					
-					@Override
-					public void onFail(
-					Exception e) {
-					
-					}
-				});
-			 */
+			// TODO
 		}
 	}
 	

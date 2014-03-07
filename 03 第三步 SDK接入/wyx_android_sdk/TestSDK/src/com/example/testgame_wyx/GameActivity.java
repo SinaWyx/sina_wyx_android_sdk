@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
@@ -133,30 +135,58 @@ public class GameActivity extends FragmentActivity {
 		textView1.setText(sb.toString());
 	}
 
+	private Handler mHandler = new Handler(){
+
+		@Override
+		public void handleMessage(Message msg) {
+			super.handleMessage(msg);
+			
+			if(msg.what==1){
+				
+				Toast.makeText(GameActivity.this, "（测试信息）：token验证中...",
+						Toast.LENGTH_SHORT).show();
+				
+				verifyToken( new VerifyTokenCallback(){
+
+					@Override
+					public void onSuccess(String response) {
+						runOnUiThread(new Runnable() {
+							@Override
+							public void run() {
+								setUserInfo();
+								Toast.makeText(GameActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+								
+								// 必须初始化浮动窗口
+								mWyx.initFloatView(GameActivity.this, true);
+							}
+						});
+					}
+
+					@Override
+					public void onFail(Exception e) {
+						
+					}
+				});
+			}else{
+				Toast.makeText(GameActivity.this, "登录失败！", Toast.LENGTH_SHORT).show();
+			}
+		}
+	};
+			
 	// 必须实现登录回调接口实现
 	class AuthDialogListener implements WyxAuthListener {
 
 		@Override
 		public void onComplete(Bundle values) {
-
-			// 必须初始化浮动窗口
-			mWyx.initFloatView(GameActivity.this, values);
-
-			// TODO 在此处写回调逻辑
-			setUserInfo();
-
-			String toast = "（测试信息）：登录过程完成，结果：";
-
+			
 			boolean isLogin = values != null ? values.getBoolean("isLogin")
 					: false;
-
-			if (isLogin && mWyx.isLogin(mContext)) {
-				toast += "成功，" + mWyx.getUserName();
+			
+			if (isLogin) {
+				mHandler.sendEmptyMessage(1);
 			} else {
-				toast += "失败";
+				mHandler.sendEmptyMessage(11);
 			}
-
-			Toast.makeText(GameActivity.this, toast, Toast.LENGTH_SHORT).show();
 		}
 
 		@Override
@@ -230,5 +260,56 @@ public class GameActivity extends FragmentActivity {
 		if (mProgressDialog.isShowing()) {
 			mProgressDialog.dismiss();
 		}
+	}
+	
+	/**
+	 * 将token、uid、MD5后的手机串号、ip地址上传到游戏服务器
+	 * 
+	 * @param callback
+	 */
+	private void verifyToken(final VerifyTokenCallback callback){
+		
+		//TODO
+		//需要上传的参数
+		final String token = mWyx.getToken();
+		final String userId = mWyx.getUserId();
+		final String machineid = mWyx.getEncryptIMEI();
+		final String ip = mWyx.getIPAddress();
+		
+		//TODO
+		//模拟启动一个验证token的线程
+		Thread thread = new Thread(){
+
+			@Override
+			public void run() {
+				super.run();
+				
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				
+				String result = "success";
+				callback.onSuccess(result);
+			}
+		};
+		
+		thread.start();
+	}
+	
+	interface VerifyTokenCallback{
+		
+		/**
+		 * 请求正常完成
+		 * @param response
+		 */
+		public void onSuccess(String response);
+
+		/**
+		 * 请求过程发生异常
+		 * @param e
+		 */
+		public void onFail(Exception e);
 	}
 }
