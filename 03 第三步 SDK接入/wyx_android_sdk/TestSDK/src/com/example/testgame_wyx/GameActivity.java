@@ -40,7 +40,7 @@ public class GameActivity extends FragmentActivity {
 	private AuthDialogListener mAuthListener = null;
 
 	private Wyx mWyx = null;
-
+   
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
